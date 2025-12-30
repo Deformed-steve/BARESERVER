@@ -14,10 +14,10 @@ RUN npm install --production
 COPY . .
 
 # Expose the port from Fly
-EXPOSE 8080
+EXPOSE 3000
 
 # Use the environment PORT provided by Fly
-ENV PORT=8080
+ENV PORT=3000
 
 # Start the server
 CMD ["node", "index.js"]
