@@ -6,7 +6,7 @@ const fq = createBareServer("/fq/v1/");
 
 // Simple request queue
 let activeRequests = 0;
-const MAX_CONCURRENT = 5; // tweak this depending on upstream limits
+const MAX_CONCURRENT = 20; // tweak this depending on upstream limits
 
 app.use(async (req, res, next) => {
   if (!fq.shouldRoute(req)) return next();
